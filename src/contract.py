@@ -6,7 +6,7 @@ import os
 
 
 w3 = Web3(Web3.HTTPProvider(
-    "https://polygon-mumbai.g.alchemy.com/v2/fIpMU8bhV805VlRt6nTKQCyAumTPOO1z"))
+    "https://polygon-mumbai.g.alchemy.com/v2/<>"))
 
 # change url here
 w3.middleware_onion.inject(geth_poa_middleware, layer=0)
@@ -683,13 +683,13 @@ abi = json.loads("""[
 
 
 # private key account
-key = "012205adeaccb4fc2b42dffa358357a7ee003f18beec90eb7b0e4e2c075a608c"
+key = "<>"
 
 # account address
-account = to_checksum_address('0xd9426A2a99e831670ba5A4E46054cF515AefC50A')
+account = to_checksum_address('<>')
 
 # contract address
-address = to_checksum_address('0x8c5ed20eb19410a43fc10ef22d317ffb6696ffb4')
+address = to_checksum_address('<>')
 deployed_contract = w3.eth.contract(address=address, abi=abi)
 
 print(deployed_contract.functions.getWorkerssList().call())
